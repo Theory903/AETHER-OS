@@ -9,7 +9,35 @@
 - **Name**: AETHER-OS
 - **Type**: SaaS multi-tenant AI agent operating system
 - **Languages**: Rust (core) + Python (agent runtime) + TypeScript (frontend)
-- **PRD**: [`docs/AETHER_OS_PRD.md`](../../docs/AETHER_OS_PRD.md) (44 sections)
+- **PRD**: [`docs/AETHER_OS_PRD.md`](../../docs/AETHER_OS_PRD.md) (43 sections, 7 parts)
+
+---
+
+## 1.1 Commit Law (MANDATORY)
+
+> **Commit the moment a module passes all tests. No batching. No exceptions.**
+
+### Workflow (every module, every time)
+```
+1. Write source files (≤ 400 lines each)
+2. Write inline unit tests
+3. cargo check / cargo test -p <crate>  OR  pytest tests/unit/
+4. All green + 0 warnings → git commit immediately
+5. Move to next module
+```
+
+### Commit format
+```
+feat(<crate-name>): <one-line summary>
+
+- file.rs: what it does
+- other.rs: what it does
+
+Tests: N/N passing | cargo check: clean | 0 warnings
+```
+
+- Scope = crate name (e.g. `aether-core`, `aether-policy`, `agent-loop`)
+- **One module = one commit. Never batch two modules.**
 
 ---
 
