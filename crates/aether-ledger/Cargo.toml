@@ -1,0 +1,18 @@
+[package]
+name = "aether-ledger"
+description = "Append-only cryptographic audit ledger for AETHER-OS"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether-core = { path = "../aether-core" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+sha2.workspace = true
+ed25519-dalek.workspace = true
