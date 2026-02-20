@@ -1,0 +1,51 @@
+# Rust
+target/
+*.rs.bk
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Reference projects (study only — not part of AETHER OS)
+ref/
+
+# Dependencies
+node_modules/
+
+# Docker
+*.log
+
+# Docs build
+docs/_build/
+
+# Proto generated
+*_pb2.py
+*_pb2_grpc.py
+*_pb2.pyi

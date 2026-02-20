@@ -1,0 +1,73 @@
+[project]
+name = "aether-runtime"
+version = "0.1.0"
+description = "AETHER-OS Python agent runtime — LLM providers, agent loop, tool execution"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Abhishek Jha" }]
+
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "pydantic>=2.10",
+    "pydantic-settings>=2.7",
+    "httpx>=0.28",
+    "structlog>=24.4",
+    "grpcio>=1.70",
+    "grpcio-tools>=1.70",
+    "anthropic>=0.45",
+    "openai>=1.60",
+    "google-generativeai>=0.8",
+    "mem0ai>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.25",
+    "pytest-cov>=6.0",
+    "mypy>=1.14",
+    "ruff>=0.9",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "I", "N", "UP", "B", "C4",
+    "S", "SIM", "TCH", "RUF", "PTH", "ERA",
+]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["aether_runtime"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests/python"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = [
+    "--strict-markers",
+    "--cov=aether_runtime",
+    "--cov-report=term-missing",
+    "--cov-fail-under=80",
+    "-x",
+    "--tb=short",
+]
+markers = [
+    "slow: marks tests as slow",
+    "integration: requires external services",
+]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
