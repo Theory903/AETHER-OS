@@ -1,0 +1,37 @@
+[package]
+name = "aether-server"
+description = "AETHER-OS modular monolith binary — ties all modules together"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether-core = { path = "../aether-core" }
+aether-tool-gateway = { path = "../aether-tool-gateway" }
+aether-orchestrator = { path = "../aether-orchestrator" }
+aether-ledger = { path = "../aether-ledger" }
+aether-memory = { path = "../aether-memory" }
+aether-policy = { path = "../aether-policy" }
+aether-workflow = { path = "../aether-workflow" }
+aether-model-router = { path = "../aether-model-router" }
+aether-context-graph = { path = "../aether-context-graph" }
+aether-budget = { path = "../aether-budget" }
+aether-transport = { path = "../aether-transport" }
+aether-session = { path = "../aether-session" }
+aether-scheduler = { path = "../aether-scheduler" }
+aether-compliance = { path = "../aether-compliance" }
+aether-diagnostics = { path = "../aether-diagnostics" }
+aether-hypervisor = { path = "../aether-hypervisor" }
+aether-network = { path = "../aether-network" }
+aether-compiler = { path = "../aether-compiler" }
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+axum.workspace = true
+tower.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+tonic.workspace = true

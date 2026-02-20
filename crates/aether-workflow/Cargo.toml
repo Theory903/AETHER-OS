@@ -1,0 +1,18 @@
+[package]
+name = "aether-workflow"
+description = "Persistent workflow engine — stores, executes, and manages DAG workflows"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether-core = { path = "../aether-core" }
+aether-policy = { path = "../aether-policy" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+async-trait.workspace = true
+uuid.workspace = true
+chrono.workspace = true

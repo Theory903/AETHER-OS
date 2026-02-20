@@ -1,0 +1,16 @@
+[package]
+name = "aether-context-graph"
+description = "Code intelligence — AST, call graph, dependency graph, semantic embeddings, hierarchical summaries"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether-core = { path = "../aether-core" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+async-trait.workspace = true
+uuid.workspace = true

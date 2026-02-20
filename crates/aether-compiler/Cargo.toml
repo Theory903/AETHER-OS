@@ -1,0 +1,17 @@
+[package]
+name = "aether-compiler"
+description = "Multi-language compile + execute — Python, Node, Rust, C++ in sandboxed VMs"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether-core = { path = "../aether-core" }
+aether-hypervisor = { path = "../aether-hypervisor" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+async-trait.workspace = true
+uuid.workspace = true

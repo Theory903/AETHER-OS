@@ -1,0 +1,18 @@
+[package]
+name = "aether-scheduler"
+description = "Global priority scheduling — fair queuing, backpressure, tenant SLA enforcement"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether-core = { path = "../aether-core" }
+aether-budget = { path = "../aether-budget" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+async-trait.workspace = true
+uuid.workspace = true
+chrono.workspace = true

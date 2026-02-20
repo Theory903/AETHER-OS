@@ -1,0 +1,19 @@
+[package]
+name = "aether-tool-gateway"
+description = "Tool registry, schema validation, and execution engine for AETHER-OS"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+aether-core = { path = "../aether-core" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+async-trait.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+semver.workspace = true
+jsonschema.workspace = true
