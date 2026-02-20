@@ -60,3 +60,5 @@ jsonschema = "0.29"
 async-trait = "0.1"
 # Semver
 semver = { version = "1", features = ["serde"] }
+# Concurrent maps
+dashmap = "6"
